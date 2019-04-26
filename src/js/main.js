@@ -6,6 +6,10 @@ require("./lib/social"); // Twitter intent JS
 var imgReveal = $('#top-quote').offset().top;
 
 
+// $("[href*=")
+// $("html,body").stop().animate({scrolTop: })
+
+
 
 $(document).scroll(function() {
 
