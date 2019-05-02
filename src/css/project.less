@@ -1,3 +1,5 @@
+
+
 header{
 	display: none; 
 	/*for now*/
@@ -22,6 +24,10 @@ iframe{
   z-index: -1;
   position: -webkit-sticky;
   position: sticky;
+
+  @media @mobile{
+  	font-size: 16px
+  }
 
   img{
 		display: block;
@@ -87,8 +93,6 @@ iframe{
 	h2{
 		font-family:@sans-serif;
 	}
-
-
 
 
 	.deck{
@@ -207,3 +211,4 @@ blockquote{
     border-right: 4px solid #ccc;
     text-align: center;
 }
+
