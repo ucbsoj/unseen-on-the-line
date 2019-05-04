@@ -113,6 +113,7 @@ iframe{
 
 .toplink{
 	font-family:@sans-serif-bold;
+  margin-top: 1em;
 
 	a{
 
@@ -230,12 +231,16 @@ ul.main-nav {
 
 blockquote{
    max-width: 730px;
-   margin: auto;
    padding: 0 15px;
-   margin-bottom: 1em;
-   padding-right: 0px;
+   margin: 3em auto 2em;
+   line-height: 1.4;
+   padding-right: 10px;
    border-right: 4px solid #ccc;
    text-align: center;
+
+   @media @mobile{
+   	text-align: right;
+   }
 }
 
 article{
