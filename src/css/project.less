@@ -49,6 +49,7 @@ iframe{
 #topper{
 	color:@white;
 	position: relative;
+	height: 92vh;
 
 	.bg-img{
 		filter: blur(10px);
@@ -70,7 +71,7 @@ iframe{
 		display:flex;
 		align-items:center;
 		justify-content: center;
-		height:120vh;
+		height:100vh;
 
 		background:rgba(0, 0, 0, 0.42);
 
@@ -80,6 +81,10 @@ iframe{
         -ms-animation: fadein 5s; /* Internet Explorer */
          -o-animation: fadein 5s; /* Opera < 12.1 */
             animation: fadein 5s;
+
+    @media @mobile{
+    	padding:0 10px;
+    }
 	}
 
 	h1{
@@ -87,12 +92,20 @@ iframe{
 		line-height: 1;
 		margin:0;
 		font-family:@sans-serif-bold;
+
+		@media @mobile{
+			font-size: 3em;
+		}
 	}
 
 	.deck{
 		max-width: 700px;
 		font-family:@sans-serif;
 		line-height: 1.2;
+
+		@media @mobile{
+			font-size: 18px;
+		}
 
 	}
 }
@@ -197,13 +210,13 @@ ul.main-nav {
 }
 
 blockquote{
-    max-width: 730px;
+   max-width: 730px;
    margin: auto;
    padding: 0 15px;
    margin-bottom: 1em;
    padding-right: 0px;
-    border-right: 4px solid #ccc;
-    text-align: center;
+   border-right: 4px solid #ccc;
+   text-align: center;
 }
 
 
@@ -223,6 +236,33 @@ h2{
 		font-size:40px;
 		font-family: @serif;
 		margin: 20px auto;
+}
+
+.video-background {
+    background: #000;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+}
+#vidtop-content {
+    top: 0;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+   .video-foreground { width: 300%; left: -100%; }
+
+   @media @mobile{
+		.video-foreground { width: 320%; left: -100%; }
+	}
 }
 
 
