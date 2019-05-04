@@ -49,6 +49,7 @@ iframe{
 #topper{
 	color:@white;
 	position: relative;
+	overflow: hidden;
 	height: 92vh;
 
 	.bg-img{
@@ -112,6 +113,13 @@ iframe{
 
 .toplink{
 	font-family:@sans-serif-bold;
+
+	a{
+
+		@media @mobile{
+			font-size: 16px;
+		}
+	}
 }
 
 .spacer {
@@ -151,14 +159,24 @@ section{
 	}
 }
 
+#second{
+	padding: 0;
+}
+
+#third{
+	padding: 0;
+}
 #fourth{
 	background: rgb(0,0,0);
 	background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%);
+	padding:0;
+	height: 25vh;
 }
 
 #fifth{
 	background:#fff;
 	padding-top: 3em;
+  margin-top: -1px;
 }
 
 
