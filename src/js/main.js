@@ -9,7 +9,7 @@ var myChart = new Chart(ctx, {
     data: {
         labels: ['Nursing and residential care', 'Motor home manufacturing', 'Skiing facilities', 'Recycling facilities (MRFS)', 'Veterinary services', 'Average, all industries'],
         datasets: [{
-            label: 'Injury rate',
+            label: 'Injury rate per 100 workers',
             data: [10.9, 10.3, 10.2, 9.8, 9.8, 3.1,],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
