@@ -4,7 +4,6 @@ import Chart from 'chart.js';
 
 
 
-var titleReveal = $('#title-appear').offset().top;
 var deckReveal = $('#deck-appear').offset().top;
 var vanishInfo = $('#vanish').offset().top-300;
 
@@ -21,7 +20,7 @@ $(document).scroll(function() {
 
   }
 
-  if (scroll > titleReveal){
+  if (scroll > deckReveal){
 
     $(".title .deck").css('display','block')  
   
