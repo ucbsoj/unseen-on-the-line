@@ -2,6 +2,43 @@ import $ from "jquery"; // importing jQuery, you can delete if not needed
 require("./lib/social"); // Twitter intent JS
 import Chart from 'chart.js';
 
+
+
+var titleReveal = $('#title-appear').offset().top;
+var deckReveal = $('#deck-appear').offset().top;
+var vanishInfo = $('#vanish').offset().top-300;
+
+
+
+$(document).scroll(function() {
+
+  var scroll = $(document).scrollTop();
+
+
+  if (scroll > 100) {
+
+    $(".title h1").css('display','block')  
+
+  }
+
+  if (scroll > titleReveal){
+
+    $(".title .deck").css('display','block')  
+  
+  }
+
+  if (scroll > vanishInfo){
+
+    $(".title").css('display','none')  
+  
+  } else{
+    $(".title").css('display','flex')  
+  }
+
+});
+
+
+
 // creating a chart
 var ctx = document.getElementById('chartone');
 var myChart = new Chart(ctx, {
@@ -115,9 +152,6 @@ var myChart = new Chart(ctx, {
         }
     }
 });
-
-
-
 
 
 

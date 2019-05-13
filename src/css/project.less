@@ -50,7 +50,7 @@ iframe{
 	color:@white;
 	position: relative;
 	overflow: hidden;
-	height: 100vh;
+
 
 	.bg-img{
 		filter: blur(10px);
@@ -66,16 +66,14 @@ iframe{
 		font-family:@sans-serif;
 		width:100%;
 		text-align: center;
-		position: absolute;
+		position: fixed;
+		text-shadow: 1px 1px 2px #000;
 		flex-direction: column;
 		top:0;
 		display:flex;
 		align-items:center;
 		justify-content: center;
 		height:100vh;
-
-		background:rgba(0, 0, 0, 0.42);
-
 
     -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 5s; /* Firefox < 16 */
@@ -91,6 +89,12 @@ iframe{
 	h1{
 		font-size: 5em;
 		line-height: 1;
+		display: none;
+		-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
 		margin:0;
 		font-family:@sans-serif-bold;
 
@@ -99,11 +103,17 @@ iframe{
 		}
 	}
 
+
 	.deck{
 		max-width: 700px;
 		font-family:@sans-serif;
 		line-height: 1.2;
-
+		display: none;
+		-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
 		@media @mobile{
 			font-size: 18px;
 		}
@@ -171,7 +181,7 @@ section{
 	background: rgb(0,0,0);
 	background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%);
 	padding:0;
-	height: 25vh;
+	height: 50vh;
 }
 
 #fifth{
@@ -270,10 +280,12 @@ h2{
     background: #000;
     top: 0; right: 0; bottom: 0; left: 0;
     z-index: -99;
+    position: fixed;
 }
 .video-foreground,
 .video-background iframe {
     position: absolute;
+    		background:rgba(0, 0, 0, 0.42);
     top: 0; left: 0;
     width: 100%; height: 100%;
     pointer-events: none;

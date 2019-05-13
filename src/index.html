@@ -30,23 +30,32 @@
 
 <%= t.include("partials/_nav.html", grunt.data.json) %>
 
-  	<section id="topper">
+	<section id="topper">
 
+    <div class="sticky">
       <div class="video-background">
         <div class="video-foreground">
-        <iframe src="https://player.vimeo.com/video/334770101?muted=1&autoplay=1&loop=1&autopause=0&controls=0" frameborder="0" allow="autoplay; fullscreen" background="black" allowfullscreen> </iframe></div>
-
-        <div class="title">
-          <h1>On the Line</h1>
-          <div class="deck">California has some of the nation’s most progressive recycling policies and goals, but the industry’s workers face hazardous conditions—and global market forces are adding to their strain.</div>
+          <iframe src="https://player.vimeo.com/video/334770101?muted=1&autoplay=1&loop=1&autopause=0&controls=0" frameborder="0" allow="autoplay; fullscreen" background="black" allowfullscreen> </iframe>
         </div>
-
+      </div>
+    </div>
+     <div class="title">
+        <h1>On the Line</h1>
+        <div class="deck">California has some of the nation’s most progressive recycling policies and goals, but the industry’s workers face hazardous conditions—and global market forces are adding to their strain.</div>
       </div>
 
-     <a name="back"></a>
+    <div class='spacer top-info' id="title-appear"></div>
+    <div class='spacer top-info' id="deck-appear"></div>
+    <div class='spacer top-info' id="vanish"></div>
+
+     
+
+    </div>
+
+   <a name="back"></a>
   	
 
-    </section>
+  </section>
 
     <section id="second">
       
@@ -395,15 +404,6 @@
 <hr>
 </section>
   
-
-   <script type='text/javascript'>
-      var divElement = document.getElementById('viz1556085556743');
-      var vizElement = divElement.getElementsByTagName('object')[0];
-          vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.40)+'px';
-      var scriptElement = document.createElement('script');
-          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-          vizElement.parentNode.insertBefore(scriptElement, vizElement);
-    </script> 
 
   <script src="app.js" async></script>  
 	<%= t.include("partials/_footer.html") %>
